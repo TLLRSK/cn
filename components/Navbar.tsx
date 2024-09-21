@@ -1,21 +1,14 @@
 import Link from "next/link";
 import React from "react";
+import Info from "./Info";
 
 function Navbar() {
   return (
-    <nav className="border-b-[1px] border-secondary flex items-center justify-between px-xs">
-      <Link href="/" className="text-xs font-bold uppercase">
+    <nav className="bg-main border-b-[1px] border-secondary flex items-center justify-between px-xs sticky">
+      <Link href="/" className="text-xs font-medium uppercase">
         cn
       </Link>
-      <label htmlFor="info" className="h-fit">
-        <input
-          type="checkbox"
-          name="info"
-          id="info"
-          className="absolute appearance-none"
-        />
-        <span className="uppercase text-xs font-bold">info</span>
-      </label>
+      <Info />
     </nav>
   );
 }

@@ -22,7 +22,7 @@ async function HomePage() {
   const imageData = home_image ? await getImage(home_image) : null;
 
   return (
-    <section className="h-[calc(100dvh-25px)] p-xs sm:p-sm md:p-md max-w-[1920px] m-auto">
+    <section className="h-[calc(100dvh-25px)] p-xs sm:p-sm md:p-md max-w-[1920px] m-auto border-b-[1px] border-secondary">
       <article className={articleClasses}>
         <div
           className={imageContainerClasses}
@@ -56,7 +56,7 @@ async function HomePage() {
   );
 }
 const articleClasses =
-  "flex flex-col h-full lg:grid lg:grid-cols-2 border border-secondary";
+  "flex flex-col h-full lg:grid lg:grid-cols-2 border border-secondary max-w-[1640px] m-auto";
 const imageContainerClasses =
   "flex flex-1 items-end p-xs border-b-[1px] border-secondary lg:border-b-none lg:border-r-[1px] [&>p]:text-main [&>p]:text-xs [&>p]:leading-xs [&>p]:font-medium [&>p]:h-fit [&>p]:mix-blend-difference";
 const titleClasses =

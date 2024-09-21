@@ -27,8 +27,8 @@
 
   --font-title-xs: 17.7vw;
   --font-title-sm: 17.7vw;
-  --font-title-md: 11.11vw;
-  --font-title-lg: 9.04vw;
+  --font-title-md: 11.15vw;
+  --font-title-lg: clamp(92px, 9.03vw, 154px);
 
 
   --line-height-xs: var(--unit-xs);
