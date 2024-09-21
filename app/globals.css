@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #F6FDFF;
+  --black: #1E1E1E;
+
+  --unit-xs: 12px;
+  --unit-s: 16px; /* 12px */
+  --unit-m: 20px; /* 16px */
+  --unit-l: 24px; /* 24px */
+  --unit-xl: 32px; /* 32px */
+  --unit-xl: clamp(42px 4vw 62px); /* xl */
+
+  --color-main: var(--white);
+  --color-secondary: var(--black);
+
+  --background-main: var(--color-main);
+  --background-secondary: var(--color-secondary);
+
+  --font-xs: var(--unit-xs);
+  --font-s: var(--unit-s);
+  --font-m: var(--unit-m);
+  --font-l: var(--unit-l);
+  --font-xl: var(--unit-xl);
+  --font-title: clamp(64px, 6vw, 142px);
+
+  --line-height-xs: var(--unit-xs);
+  --line-height-s: var(--unit-s);
+  --line-height-m: var(--unit-m);
+  --line-height-l: var(--unit-l);
+  --line-height-xl: var(--unit-xl);
+  --line-height-title: 80%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-main: var(--black);
+    --color-secondary: var(--white);
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-secondary);
+  background: var(--background-main);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
