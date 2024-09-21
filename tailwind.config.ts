@@ -30,8 +30,8 @@ const config: Config = {
       lineHeight: {
         xs: "var(--line-height-xs)",
         sm: "var(--line-height-sm)",
-        md: "var(--line-height-m)",
-        lg: "var(--line-height-l)",
+        md: "var(--line-height-md)",
+        lg: "var(--line-height-lg)",
         xl: "var(--line-height-xl)",
         "title-xs": "var(--line-height-title-xs)",
       },
@@ -44,6 +44,12 @@ const config: Config = {
         xs: "8px",
         sm: "16px",
         md: "24px",
+      },
+      gap: {
+        xs: "6px",
+        sm: "12px",
+        md: "16px",
+        lg: "24px",
       },
       screens: {
         'sm': '560px',
