@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --white: #F6FDFF;
-  --black: #1E1E1E;
+  --white: #f6fdff;
+  --black: #1e1e1e;
 
   --unit-xs: 12px;
-  --unit-s: 16px; /* 12px */
+  --unit-sm: 16px; /* 12px */
   --unit-m: 20px; /* 16px */
   --unit-l: 24px; /* 24px */
   --unit-xl: 32px; /* 32px */
@@ -20,18 +20,23 @@
   --background-secondary: var(--color-secondary);
 
   --font-xs: var(--unit-xs);
-  --font-s: var(--unit-s);
+  --font-sm: var(--unit-sm);
   --font-m: var(--unit-m);
   --font-l: var(--unit-l);
   --font-xl: var(--unit-xl);
-  --font-title: clamp(64px, 6vw, 142px);
+
+  --font-title-xs: 17.7vw;
+  --font-title-sm: 17.7vw;
+  --font-title-md: 11.11vw;
+  --font-title-lg: 9.04vw;
+
 
   --line-height-xs: var(--unit-xs);
-  --line-height-s: var(--unit-s);
+  --line-height-s: var(--unit-sm);
   --line-height-m: var(--unit-m);
   --line-height-l: var(--unit-l);
   --line-height-xl: var(--unit-xl);
-  --line-height-title: 80%;
+  --line-height-title-xs: 80%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,7 +46,9 @@
   }
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -57,20 +64,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 

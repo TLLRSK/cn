@@ -1,23 +1,26 @@
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Metadata } from 'next';
-import React from 'react'
+import { Metadata } from "next";
+import { Inter } from "next/font/google";
+import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Project",
-  description: "A Next.js project with TypeScript and TailwindCSS",
-  keywords: "Next.js, Typescript, TailwindCSS",
+  title: "Coke Navarro",
+  description: "Illustrator and comic artist",
+  keywords: "Illustration, Illustrator, Comic, Comic artist",
 };
 
-const HomeLayout = ({children}) => {
+const inter = Inter({ subsets: ["latin"] });
+
+const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="eng">
-      <body>
+      <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
       </body>
     </html>
-  )
-}
+  );
+};
 
-export default HomeLayout
+export default HomeLayout;
