@@ -22,7 +22,7 @@ async function Hero() {
   const imageData = home_image ? await getImage(home_image) : null;
 
   return (
-      <section className="h-[calc(100dvh-25px)] p-xs sm:p-sm md:p-md max-w-[1920px] mt-[25px]">
+      <section className="h-[100dvh] p-sm pt-[41px] sm:p-md sm:pt-[41px] md:p-md md:pt-[46px]">
         <article className={articleClasses}>
           <div
             className={imageContainerClasses}
@@ -33,9 +33,8 @@ async function Hero() {
               backgroundSize: "cover",
             }}
           >
-            <p className="flex-1">00/00/00</p>
-            <p className="flex-1 text-center">00:00AM</p>
-            <p className="flex-1 text-right uppercase">{location}</p>
+            <p className="flex-1 text-left text-xs">00:00 AM</p>
+            <p className="flex-1 text-right text-xs uppercase">{location}</p>
           </div>
 
           <div className="content-end p-xs">
@@ -56,7 +55,7 @@ async function Hero() {
   );
 }
 const articleClasses =
-  "flex flex-col h-full lg:grid lg:grid-cols-2 border border-secondary max-w-[1280px] m-auto";
+  "flex flex-col h-full lg:grid lg:grid-cols-2 border border-secondary";
 const imageContainerClasses =
   "md:min-w-[50%] xl:min-w-[44%] flex flex-1 items-end p-xs border-b-[1px] border-secondary lg:border-b-none lg:border-r-[1px] [&>p]:text-main [&>p]:text-xs [&>p]:leading-xs [&>p]:font-medium [&>p]:h-fit [&>p]:mix-blend-difference";
 const titleClasses =

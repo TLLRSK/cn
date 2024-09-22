@@ -9,7 +9,7 @@ function Info() {
         id="info"
         className="absolute appearance-none"
       />
-      <span className="uppercase text-xs font-medium">info</span>
+      <span className="uppercase text-xs lg:text-md font-medium">info</span>
     </label>
   );
 }

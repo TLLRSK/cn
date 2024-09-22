@@ -6,21 +6,26 @@ async function ProjectsCarousel() {
   const projects = await getPostsData();
 
   return (
-    <section>
-      <header className="bg-main flex items-end justify-between p-xs pt-md sticky border-b-[1px] border-secondary">
+    <section className="relative">
+      <header className="grid grid-cols-6 bg-main items-end justify-between px-sm md:px-md py-xs pt-[52px] md:pt-[64px] border-b-[1px] border-secondary sticky top-0 z-20">
 
-        <h2 className="h-fit text-xl leading-xl font-black uppercase">
+        <h2 className="col-span-5 h-fit text-lg lg:text-xl leading-md lg:leading-xl font-black uppercase">
           selected projects
         </h2>
 
-        <p className="pt-xs text-sm leading-sm font-black">
-          00/00
-        </p>
+        <div>
+          <p className="text-xs lg:text-md leading-xs lg:leading-md font-medium text-right">
+            Pr.
+          </p>
+          <p className="text-xs lg:text-md leading-xs lg:leading-md font-medium text-right">
+            1/9
+          </p>
+        </div>
       </header>
 
       <ul className="relative">
         {projects.map((project) => {
-          return <ProjectCard {...project}/>
+          return <ProjectCard key={project.id} {...project}/>
         })}
       </ul>
     </section>
