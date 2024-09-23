@@ -8,7 +8,7 @@ async function ProjectCard(project) {
   const { featured_media } = project;
   const { year, client, type } = project.acf.details_group;
   const imageData = await getImage(featured_media);
-  console.log(imageData.source_url);
+  // console.log(project);
   return (
     <article className="relative h-[80dvh] flex items-end">
       <Image
@@ -49,7 +49,7 @@ async function ProjectCard(project) {
           </div>
 
           <Link
-            href="/"
+            href={`/projects/${project.slug}`}
             className="absolute bottom-0 right-0 md:top-0 flex items-center justify-end px-sm py-xs  gap-[4px] border-secondary md:border-l-[1px] uppercase"
           >
             <span className="text-sm font-black leading-sm lg:text-md">

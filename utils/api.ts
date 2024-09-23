@@ -52,3 +52,21 @@ export const getPostsData = async () => {
     console.log(error);
   }
 };
+export const getSinglePost = async (slug: string) => {
+  try {
+    const response = await fetch(
+      `${apiUrl}/posts?slug=${slug}&acf_format=standard`,
+      {
+        next: { revalidate: 60000 },
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch posts data");
+    }
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+};
